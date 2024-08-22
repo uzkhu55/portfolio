@@ -1,4 +1,14 @@
-import { AboutMe, Header, Navigation, Intro, Skills } from "@/components";
+import {
+  AboutMe,
+  Header,
+  Navigation,
+  Intro,
+  Skills,
+  Experience,
+  Work,
+  Contact,
+  Footer,
+} from "@/components";
 import { useState } from "react";
 
 export default function Home() {
@@ -11,8 +21,11 @@ export default function Home() {
         <AboutMe />
         <Intro />
         <Skills />
+        <Experience />
+        <Work />
+        <Contact />
+        <Footer />
       </div>
     </>
   );
 }
-``;

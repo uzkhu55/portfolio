@@ -19,7 +19,7 @@ export const Skills = () => {
   ];
 
   return (
-    <div className="py-[64px] md:py-[80px] md:h-[600px] px-4 flex flex-col items-center gap-6">
+    <div className="py-[64px] md:py-[80px] md:justify-between md:h-[650px] px-4 flex flex-col items-center gap-6">
       <div className="w-[343px] items-center s flex flex-col gap-4">
         <div className="rounded-2xl  bg-gray-400 w-[75px] flex justify-center py-1 px-5">
           Skills
@@ -34,7 +34,7 @@ export const Skills = () => {
             key={index}
             className="flex flex-col gap-2 md:h-[108px] md:w-[88px]"
           >
-            <img className="h-16" src={image} alt="" />
+            <img className="h-14" src={image} alt="" />
             <h4>{name}</h4>
           </div>
         ))}

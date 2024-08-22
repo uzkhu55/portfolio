@@ -1,8 +1,14 @@
 import { AiFillDatabase } from "react-icons/ai";
 import { CiLight } from "react-icons/ci";
 import { IoRemoveCircleOutline } from "react-icons/io5";
+import { useTheme } from "next-themes";
 
 export const Header = ({ setOpen, open }) => {
+  const { theme, setTheme, systemTheme } = useTheme();
+
+  const handleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
   return (
     <div className="flex w-full justify-between items-center  md:py-8 px-4 md:px-8 h-[36px]">
       <span className="font-bold ">UZKHU</span>
@@ -13,10 +19,10 @@ export const Header = ({ setOpen, open }) => {
         <a href="">Contact</a>
         <div className="border border-l h-6 border-gray-300" />
         <div className="flex gap-x-1.5 items-center">
-          <button>
+          <button className="" onClick={handleTheme}>
             <CiLight />
           </button>
-          <button>Download CV</button>
+          <button className="dark:text-white">Download CV</button>
         </div>
       </div>
       {open === false ? (
